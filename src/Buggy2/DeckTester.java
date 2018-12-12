@@ -24,7 +24,7 @@ public class DeckTester {
     private static void test1CardDeck() {
         String[] r1 = {"ace"};
         String[] s1 = {"spades"};
-        int[] v1 = {1};
+        /*problem in this line*/int[] v1 = {1};
         Deck d = new Deck(r1, s1, v1);
         testOneCard(d, new Card("ace", "spades", 1));
         testEmpty(d);
