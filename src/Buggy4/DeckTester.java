@@ -1,4 +1,5 @@
-package Buggy3;
+package Buggy4;
+
 /**
  * This is a class that tests the Deck class using assert statements.
  */
@@ -23,6 +24,7 @@ public class DeckTester {
     private static void test1CardDeck() {
         String[] r1 = {"ace"};
         String[] s1 = {"spades"};
+        //There is only 1 point value. This cannot be a deck.
         int[] v1 = {1};
         Deck d = new Deck(r1, s1, v1);
         testOneCard(d, new Card("ace", "spades", 1));
@@ -110,6 +112,7 @@ public class DeckTester {
     private static void testOneCard(Deck d, Card intended) {
         assert d.size() == 1 : "Size is " + d.size()
                 + ". It should be 1 for a 1-card deck.";
+
         assert !d.isEmpty() : "isEmpty true for a 1-card deck.";
         Card c = d.deal();
         assert c != null : "1st dealt card is null for a 1-card deck.";
@@ -131,7 +134,6 @@ public class DeckTester {
                 + " does not match deck d2 size of " + d2.size() + ".";
 
         boolean allMatch = true;
-        //since d1 is the same as d2, it creates a runtime error because same objects cannot be checked for same output.
         while (!d1.isEmpty()) {
             Card c1 = d1.deal();
             Card c2 = d2.deal();

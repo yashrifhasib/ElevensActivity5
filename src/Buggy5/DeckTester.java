@@ -1,4 +1,5 @@
-package Buggy3;
+package Buggy5;
+
 /**
  * This is a class that tests the Deck class using assert statements.
  */
@@ -131,7 +132,6 @@ public class DeckTester {
                 + " does not match deck d2 size of " + d2.size() + ".";
 
         boolean allMatch = true;
-        //since d1 is the same as d2, it creates a runtime error because same objects cannot be checked for same output.
         while (!d1.isEmpty()) {
             Card c1 = d1.deal();
             Card c2 = d2.deal();
